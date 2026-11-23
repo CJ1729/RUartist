@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 200 800;
+  src: url('./assets/manrope.woff2') format('woff2');
+}
+
+@theme {
+  --font-sans: 'Manrope', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --color-ink: #24123A;
+  --color-plum: #24123A;
+  --color-plum-2: #3A2856;
+  --color-muted: #5E5470;
+  --color-line: #E7E3EC;
+  --color-surface: #F6F4F8;
+  --color-accent: #C93C27;
+  --color-accent-dark: #9E2C1B;
+  --color-accent-soft: #FCEBE7;
+  --color-ok: #1E7A4E;
+  --color-ok-soft: #E3F2EA;
+}
+
+:root { color-scheme: light; }
+html, body { background: #ffffff; color: var(--color-ink); }
+body { margin: 0; font-family: var(--font-sans); -webkit-font-smoothing: antialiased; overflow-x: clip; }
+* { -webkit-tap-highlight-color: transparent; }
+:focus-visible { outline: 3px solid var(--color-accent); outline-offset: 2px; border-radius: 10px; }
+input[type='range'] { accent-color: var(--color-accent); }
+input[type='checkbox'] { accent-color: var(--color-accent); }
+.no-scrollbar { scrollbar-width: none; }
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.safe-top { padding-top: env(safe-area-inset-top); }
+.safe-bottom { padding-bottom: env(safe-area-inset-bottom); }
+
+@keyframes sheet-in { from { transform: translateY(24px); opacity: 0; } to { transform: none; opacity: 1; } }
+.sheet-in { animation: sheet-in 0.22s ease-out; }
+@media (prefers-reduced-motion: reduce) {
+  .sheet-in { animation: none; }
+  .meter-fill { transition: none !important; }
+}

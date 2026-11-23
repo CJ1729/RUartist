@@ -1,0 +1,8 @@
+{
+  "appId": "com.ruartist.app",
+  "appName": "Ruartist",
+  "webDir": "dist",
+  "android": {
+    "adjustMarginsForEdgeToEdge": "auto"
+  }
+}

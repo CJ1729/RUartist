@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Ruartist</string>
+    <string name="title_activity_main">Ruartist</string>
+    <string name="package_name">com.ruartist.app</string>
+    <string name="custom_url_scheme">com.ruartist.app</string>
+</resources>
