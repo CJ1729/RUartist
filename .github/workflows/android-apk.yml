@@ -31,7 +31,8 @@ jobs:
           distribution: temurin
           java-version: 21
 
-      - uses: android-actions/setup-android@v3
+      - name: Check Android SDK
+        run: echo "Using Android SDK at $ANDROID_HOME"
 
       - name: Build debug APK (installable for testing)
         working-directory: android
